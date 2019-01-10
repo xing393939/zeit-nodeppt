@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "name": "vuepress",
+  "name": "nodeppt",
   "builds": [
     {"src": "package.json", "use": "@now/static-build"}
   ]
