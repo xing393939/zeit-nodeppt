@@ -1,0 +1,9 @@
+{
+  "scripts": {
+    "build": "nodeppt generate ppt/index.md dist -a",
+    "now-build": "npm run build"
+  },
+  "devDependencies": {
+    "nodeppt": "*"
+  }
+}
