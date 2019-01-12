@@ -9,9 +9,9 @@
 # 作者介绍 {:&.flexbox.vleft}
 ## 
 <div class="columns3">
-<img src="src/kaifu.jpg" height="200">
-<img src="src/wanghua.jpg" height="200">
-<img src="src/fusheng.jpg" height="200">
+<img src="src/kaifu.jpg" height="250">
+<img src="src/wanghua.jpg" height="250">
+<img src="src/fusheng.jpg" height="250">
 </div>
 
 <br/>
@@ -70,14 +70,22 @@
 # 3. 汪华的创业经验 {:&.flexbox.vleft}
 ## 垄断的六要素
 <table>
-<tr><td width="30%">1. 品牌/渠道</td>
-<td rowspan="6">以小米为例，早起通过前四个建立壁垒，现在通过收购芯片厂商、整合产业链、海外扩展的手段，试图建后两种优势。</td></tr>
+<tr style="background:#e6e6e6;"><td width="30%">1. 品牌/渠道</td>
+<td rowspan="6">
+后两者与创业公司无关，可后期建立。<br/><br/>
+以小米为例，早期通过前四个建立壁垒，现在通过收购芯片厂商、整合产业链、海外扩展的手段，试图建后两种优势。
+</td></tr>
 <tr><td>2. 网络效应</td></tr>
-<tr><td>3. 规模效应（供应链）</td></tr>
+<tr style="background:#e6e6e6;"><td>3. 规模效应（供应链）</td></tr>
 <tr><td>4. 技术</td></tr>
-<tr><td>5. 复杂度和资源消耗</td></tr>
-<tr><td>6. 独有资源授权垄断</td></tr>
+<tr style="background:#e6e6e6;"><td>5. 复杂度和资源消耗</td></tr>
+<tr><td>6. 独有资源和授权垄断</td></tr>
 </table>
+
+[slide]
+# 3. 汪华的创业经验 {:&.flexbox.vleft}
+## 新增长范式的四个发展阶段
+<img src="src/4fangshi.jpg" width="800"/>
 
 [slide]
 # 3. 汪华的创业经验 {:&.flexbox.vleft}
