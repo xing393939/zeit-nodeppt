@@ -6,42 +6,50 @@
 </style>
 
 [slide]
+# 作者介绍 {:&.flexbox.vleft}
+## 
+
+<div class="columns3">
+<img src="src/kaifu.jpg" height="200">
+<img src="src/wanghua.jpg" height="200">
+<img src="src/fusheng.jpg" height="200">
+</div>
+<div class="columns3">
+<pre>
+
+李开复
+创新工场的董事长</pre>
+<pre>
+
+汪华
+创新工场的创始人</pre>
+<pre>
+
+傅盛
+猎豹移动（原金山网络）CEO</pre>
+</div>
+
+[slide]
 # 目录 {:&.flexbox.vleft}
-## 一，监控哪些指标、监控的好处
-## 二，第三方服务vs自建方案
-## 三，自建方案(基于Redis队列)
-## 四，自建方案(基于Sentry客户端SDK)
-## 五，待完善的地方
+## 1. 为什么要细分垄断
+## 2. 李开复谈互联网的幂定律
+## 3. 汪华的创业经验
+## 4. 傅盛火车头三部曲
 
 [slide]
-# 一，监控哪些指标、监控的好处 {:&.flexbox.vleft}
-## 监控哪些指标
-* pv、pv响应时间
-* 资源：数据库，缓存，Api接口
-* 错误日志
-
-## 监控的好处
-* 光有 Web 日志是不够的
-* 对优化代码有精确的数据参考
-* 更清楚业务的服务依赖关系
+# 1. 为什么要细分垄断 {:&.flexbox.vleft}
+## 为什么要细分垄断
+* 创业公司只有有限的钱和资源，如果没有进展只能活一两年，所以只能创造小垄断
+* 真正能让创业者有机会的在于，传统巨头没有看清趋势给了你先机，或者看清了也办法采纳和直接使用（极限验证）。
 
 [slide]
-# 二，第三方服务vs自建方案 {:&.flexbox.vleft}
-## 国外服务
-* New Relic
-* AppDynamics
+# 2. 李开复谈互联网的幂定律 {:&.flexbox.vleft}
+## 互联网产品符合幂定律
+* 安卓和苹果系统占智能手机系统98%
+* 电商领域，淘宝是其它所有电商之和
 
-## 国内服务
-* oneAPM
-* 听云
-* apm.aliyun.com
-* 透视宝
-
-[slide]
-# 二，第三方服务vs自建方案 {:&.flexbox.vleft}
-## 自建方案
-
-<img src="/src/zijian.jpg" width="770" height="339">
+## 移动IM，微信一骑绝尘
+人才符合幂定律。在工业社会，一个最好的，最有效率的个人能多生产20%～30%的产品。但是在信息社会中，一个好的人才，能够比一般人员多做出500%甚至1000%的工作。
 
 [slide]
 # 三，自建方案(基于Redis队列) {:&.flexbox.vleft}
