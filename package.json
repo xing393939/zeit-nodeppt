@@ -1,7 +1,7 @@
 {
   "scripts": {
     "build": "nodeppt generate ppt/startup/index.md dist -a",
-    "now-build": "npm run build && cp -f ppt/nodeppt.js dist/js/nodeppt.js"
+    "now-build": "npm run build && sed -i 's/\.\///' dist/index.html"
   },
   "devDependencies": {
     "nodeppt": "*"
