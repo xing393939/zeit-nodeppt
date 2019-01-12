@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "build": "nodeppt generate ppt/index.md dist -a",
+    "build": "nodeppt generate ppt/startup/index.md dist -a",
     "now-build": "npm run build"
   },
   "devDependencies": {
