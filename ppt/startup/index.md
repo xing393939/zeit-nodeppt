@@ -8,23 +8,24 @@
 [slide]
 # 作者介绍 {:&.flexbox.vleft}
 ## 
-
 <div class="columns3">
 <img src="src/kaifu.jpg" height="200">
 <img src="src/wanghua.jpg" height="200">
 <img src="src/fusheng.jpg" height="200">
 </div>
+
+<br/>
+
 <div class="columns3">
 <pre>
-
 李开复
-创新工场的董事长</pre>
+创新工场的董事长
+</pre>
 <pre>
-
 汪华
-创新工场的创始人</pre>
+创新工场的创始人
+</pre>
 <pre>
-
 傅盛
 猎豹移动（原金山网络）CEO</pre>
 </div>
@@ -34,7 +35,7 @@
 ## 1. 为什么要细分垄断
 ## 2. 李开复谈互联网的幂定律
 ## 3. 汪华的创业经验
-## 4. 傅盛火车头三部曲
+## 4. 傅盛的战略三部曲
 
 [slide]
 # 1. 为什么要细分垄断 {:&.flexbox.vleft}
@@ -47,88 +48,30 @@
 ## 互联网产品符合幂定律
 * 安卓和苹果系统占智能手机系统98%
 * 电商领域，淘宝是其它所有电商之和
+* 移动IM，微信一骑绝尘
 
-## 移动IM，微信一骑绝尘
-人才符合幂定律。在工业社会，一个最好的，最有效率的个人能多生产20%～30%的产品。但是在信息社会中，一个好的人才，能够比一般人员多做出500%甚至1000%的工作。
+<br />
 
-[slide]
-# 三，自建方案(基于Redis队列) {:&.flexbox.vleft}
-## 在路由处加自定义装饰器
-
-```python
-def perf_logging(func):
-    @wraps(func)
-    def wrapper(*args, **kwargs):
-        try:
-            time_start = time.time()
-            ret = func(*args, **kwargs)
-            time_end = time.time()
-            redis_conn.lpush("apm:0x00000001", json.dumps({
-                "url": request.url_rule.rule,
-                "time_spent": time_end - time_start,
-            }))
-        except Exception as e:
-            raise
-        return ret
-    return wrapper
-
-@app.route('/whitelist.json')
-@perf_logging
-def whitelist():
-    ...
-```
+## 人才符合幂定律
+在工业社会，一个最好的，最有效率的个人能多生产20%～30%的产品。但是在信息社会中，一个好的人才，能够比一般人员多做出500%甚至1000%的工作。
 
 [slide]
-# 四，自建方案(基于Sentry客户端SDK) {:&.flexbox.vleft}
-## 利用Flask的信号钩子，Sentry官方调用示例如下： 
-
-```python
-import flask
-
-import sentry_sdk
-from sentry_sdk.integrations.flask import FlaskIntegration
-sentry_sdk.init(
-    dsn="https://269190fd927b40ec15195a4b1524424b@sentry.io/1272139",
-    integrations=[FlaskIntegration()]
-)
-
-app = Flask(__name__)
-```
+# 汪华的创业经验 {:&.flexbox.vleft}
+## 几个观点
+* 避免多边市场，要范式简单，避免变数和复杂性
+* 跳板思维：我本来是想做B，但是为了把B做起来，我先做A，A做起来再给B倒流。1，创业每个环节有50%做成的可能性，多一个环节成功率呈数量级降低。2，创业者做的很多事情是有创业窗口的，先做A再做B，可能别人就直接把你的B做了。
+* 乔布斯陷阱。创业者总觉得自己要做一个特别完美的产品，这样做的问题是公司没法扩张。追求完美需要更高的技术，更复杂的运营，导致自己的扩张成本和扩张速度跟不上别人。最后你只能被哪些做的比较糙但是扩张速度快很多的人干掉（代驾领域的安师傅和e代驾）。
 
 [slide]
-# 四，自建方案(基于Sentry客户端SDK) {:&.flexbox.vleft}
-## 增加对pv的监控
-
-```python
-import sentry_sdk
-from sentry_sdk.integrations.flask import FlaskIntegration
-import weakref
-from flask.signals import request_started
-from flask import _request_ctx_stack
-class FlaskIntegrationDiy(FlaskIntegration):
-	@staticmethod
-	def setup_once():
-		request_started.connect(catch_request_started)
-		super(FlaskIntegrationDiy, FlaskIntegrationDiy).setup_once()
-def catch_request_started(sender, **kwargs):
-    hub = sentry_sdk.hub.Hub.current
-    integration = hub.get_integration(FlaskIntegrationDiy)
-    if integration is not None:
-    	weak_request = weakref.ref(_request_ctx_stack.top.request)
-    	hub.capture_event({"transaction": weak_request().environ['PATH_INFO']})
-sentry_sdk.init(
-    dsn="https://testdemo@10.0.0.11/100",
-    integrations=[FlaskIntegrationDiy()]
-)
-```
+# 4. 傅盛的战略三部曲 {:&.flexbox.vleft}
+## 猎豹移动的发展故事
+xxxxx
 
 [slide]
-# 五，待完善的地方 {:&.flexbox.vleft}
-## 监控pv响应时间
-## 监控资源：数据库、缓存
-## 汇总端的并发性能问题
-## Sentry SDK的问题(内存泄漏)
-## 业务埋点数据
+# 4. 傅盛的战略三部曲  {:&.flexbox.vleft}
+## 战略三部曲：预测，破局，All in
+xxxxx
+
 
 [slide]
 # Thanks
