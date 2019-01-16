@@ -125,7 +125,9 @@
 [slide]
 # 3. 汪华：垄断的四个发展阶段 {:&.flexbox.vleft}
 ## 阶段二：拿下滩头阵地
+<div style="text-align:center;">
 <img src="src/key.jpg" width="500"/>
+</div>
 
 [slide]
 # 3. 汪华：垄断的四个发展阶段 {:&.flexbox.vleft}
