@@ -26,33 +26,33 @@
 ## VPC，Virtual Private Cloud
 ## 子网
 ## 安全组
-## 其他网络相关：网络ACL、操作系统层面的防火墙
+## 其他网络相关：网络 ACL、系统防火墙
 
 
 [slide]
-# 服务和IAM {:&.flexbox.vleft}
+# 服务和 IAM {:&.flexbox.vleft}
 ## 概念：
-## IAM角色
-## IAM策略
+## IAM 角色
+## IAM 策略
 ## ARN，资源名称
-## 示例
-## lambda 调用 s3 和 控制ec2
-## mysql 调用 lambda，https://docs.aws.amazon.com/zh_cn/AmazonRDS/latest/AuroraUserGuide/AuroraMySQL.Integrating.Lambda.html
+## 示例：
+## Lambda 调用 S3 和 控制 EC2
+## Mysql 调用 Lambda，[教程](https://docs.aws.amazon.com/zh_cn/AmazonRDS/latest/AuroraUserGuide/AuroraMySQL.Integrating.Lambda.html)
 
 
 [slide]
-# 常见技术在aws的实现 {:&.flexbox.vleft}
-## 无服务化：lambda
-## 大数据数据流kafka：kinesis
+# 常见技术在 AWS 的实现 {:&.flexbox.vleft}
+## 无服务化：Lambda
+## 大数据数据流 Kafka：Kinesis
 ## 大数据离线和实时分析：Athena、EMR
 ## 消息队列: AMAZON MQ
 
 
 [slide]
 # 3. 几个实践 {:&.flexbox.vleft}
-## 移动端mobile hub
-## 第三方登录：cognito
-## 收集日志：cloudwatch或者kinesis+s3
+## 移动端 Mobile hub
+## 第三方登录：Cognito
+## 收集日志：Cloudwatch 或者 Kinesis + S3
 
 
 [slide]
