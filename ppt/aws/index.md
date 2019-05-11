@@ -54,6 +54,8 @@
 ## 移动端 Mobile hub
 ## 第三方登录：Cognito
 ## 收集日志：Cloudwatch 或者 Kinesis + S3
+## 查询状态 curl http://169.254.169.254/latest/meta-data/instance-type
+## 查询权限 boto3
 
 
 [slide]
